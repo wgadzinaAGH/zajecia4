@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formularz osobowy</title>
+        <script src="code.js"></script>
+    </head>
+    <body>
+        <form name="user_data">
+            <table>
+                <tr><td>Imię</td><td><input type="text" name="imie"></td></tr>
+                <tr>
+                    <td>Wykształcenie</td>
+                    <td>
+                        <input name="wyksztalcenie" value="wyksztalcenie_p" checked type="radio">podstawowe<br>
+                        <input name="wyksztalcenie" value="wyksztalcenie_s" type="radio">średnie<br>
+                        <input name="wyksztalcenie" value="wyksztalcenie_w" type="radio">wyższe
+                    </td>
+                </tr>
+                <tr><td>Email</td><td><input type="text" name="email"></td></tr>
+                <tr><td>Kod Pocztowy</td><td><input type="text" name="kod"></td></tr>
+                <tr><td>Wiadomość</td><td><textarea rows="6" cols="17" name="wiadomosc"></textarea></td></tr>
+                <tr><td colspan="2"><input type="submit" value="Wyślij" onclick="return weryfikacja()"></td></tr>
+            </table>
+        </form>
+        
+    </body>
+</html>
