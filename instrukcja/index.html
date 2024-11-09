@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formularz osobowy</title>
+        <script src="code.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <table>
+            <tbody>
+                <tr><td>Poniedziałek</td></tr>
+                <tr><td>Wtorek</td></tr>
+                <tr><td>Środa</td></tr>
+                <tr><td>Czwartek</td></tr>
+                <tr><td>Piątek</td></tr>
+                <tr><td>Sobota</td></tr>
+                <tr><td>Niedziela</td></tr>
+                <tr><td><button type="button" onclick="zamienWezly(this)">Zamień Węzły</button></td></tr>
+            </tbody>
+        </table>
+        <br><br>
+        <form name="user_data" onsubmit="return false">
+            <table>
+                <tr><td>Imię</td><td><input type="text" name="imie"></td><td><span class="blad" id="blad_imie"></span></td></tr>
+                <tr>
+                    <td>Wykształcenie</td>
+                    <td>
+                        <input name="wyksztalcenie" value="wyksztalcenie_p" id="wyksztalcenie_p" checked type="radio" onchange="kodPodstOnly()">podstawowe<br>
+                        <input name="wyksztalcenie" value="wyksztalcenie_s" id="wyksztalcenie_s" type="radio" onchange="kodPodstOnly()">średnie<br>
+                        <input name="wyksztalcenie" value="wyksztalcenie_w" id="wyksztalcenie_w" type="radio" onchange="kodPodstOnly()">wyższe
+                    </td>
+                </tr>
+                <tr><td>Email</td><td><input type="text" name="email"></td><td><span class="blad" id="blad_email"></td></tr>
+                <tr><td>Kod Pocztowy</td><td><input type="text" name="kod" id="KodPocztowy"></td><td><span class="blad" id="blad_kod"></td></tr>
+                <tr>
+                    <td>Wiadomość</td>
+                    <td>
+                        <textarea rows="5" cols="15" name="uwagi" 
+                        oninput="licznik(this.form.uwagi, document.getElementById('zostalo'), 150)">                            
+                        </textarea>
+                    </td><td><span class="blad" id="blad_wiadomosc"></td></tr>
+                <tr>
+                    <td>Pozostało <span id="zostalo">150</span> znaków</td>
+                </tr>
+                <tr><td colspan="2"><input type="submit" value="Wyślij" onclick="return weryfikacja()"></td></tr>
+            </table>
+        </form>
+        
+    </body>
+</html>
